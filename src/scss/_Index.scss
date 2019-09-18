@@ -1,7 +1,9 @@
 .wp-pagenavi {
     clear: both
 }
-
+.router-link-exact-active.router-link-active {
+  color: #08fdd8!important;
+}
 .wp-pagenavi a,
 .wp-pagenavi span {
     text-decoration: none;
@@ -7691,23 +7693,23 @@ body {
 }
 
 #nav_bar nav a:first-child:after {
-    content: 'HOME'
+    content: 'acceuil'
 }
 
 #nav_bar nav a:first-child+a:after {
-    content: 'ABOUT'
+    content: 'à propos'
 }
 
 #nav_bar nav a:first-child+a+a:after {
-    content: 'SKILLS'
+    content: 'portfolio'
 }
 
 #nav_bar nav a:first-child+a+a+a:after {
-    content: 'MY WORK'
+    content: 'contact'
 }
 
 #nav_bar nav a:first-child+a+a+a+a:after {
-    content: 'CONTACT'
+    content: 'contact'
 }
 
 #nav_bar nav.pl a:first-child:after {
@@ -9706,8 +9708,8 @@ only screen and (min-device-pixel-ratio:1.5) {
     }
 
     h1 {
-        font-size: 47px !important;
-        line-height: 40px !important
+        font-size: 45px !important;
+    line-height: 40px !important;
     }
 
     .chart.small {
@@ -9716,6 +9718,10 @@ only screen and (min-device-pixel-ratio:1.5) {
 }
 
 @media (max-width:530px) {
+    h1 {
+        font-size: 37px !important;
+        line-height: 40px !important;
+    }
     .preloader .inner {
         width: 80%
     }
@@ -9776,8 +9782,8 @@ only screen and (min-device-pixel-ratio:1.5) {
 
     #nav_bar nav {
         width: 100%;
-        position: fixed;
-        left: 100%;
+        position: absolute;
+        left: 0;
         opacity: 0;
         margin-left: 0;
         float: left;

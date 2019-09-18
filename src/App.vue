@@ -6,7 +6,7 @@
           <img src="../src/assets/img/logoCaro.svg" alt="logo" />
         </a>
         <nav id="navbar254">
-          <router-link to="/" class="home-link active">
+          <router-link to="/" class="home-link">
             <i class="fas fa-home"></i>
             <!-- <img src="../src/assets/img/home.svg" alt="home" class="icon-hom" /> -->
           </router-link>
@@ -24,7 +24,7 @@
         <ul>
           <li>
             <a href="https://twitter.com/JeznachJacek" target="_blank">
-              <i class="fab fa-facebook"></i>
+              <i class="fab fa-github"></i>
             </a>
           </li>
           <li>

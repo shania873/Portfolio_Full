@@ -99,3 +99,14 @@ export default {
 	}
 }
 </script>
+<style lang="scss">
+@media (max-width: 530px) {
+	#environment{
+		display: none;
+	}
+  .particles {
+    opacity: 0.3;
+ display: none;
+  }
+}
+</style>

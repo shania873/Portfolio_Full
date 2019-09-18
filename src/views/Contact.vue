@@ -18,6 +18,7 @@
           <span class="blast" aria-hidden="true" style="opacity: 1;">i</span>
         </h1>
         <p>Si vous avez des questions, ou autre ..</p>
+        
         <div class="contact-form">
           <form id="contact" autocomplete="off">
             <ul>

@@ -129,3 +129,16 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+@media (max-width: 530px) {
+  #planetset {
+      position: fixed;
+    right: 20%;
+    top: -100%;
+    bottom: 0;
+    opacity: 0.2;
+    z-index: 1;
+    /* display: none; */
+  }
+}
+</style>

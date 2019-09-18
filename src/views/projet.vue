@@ -1,16 +1,15 @@
 <template>
   <div id="projet" class="bg-projet">
+    <loading :active.sync="isLoading" :can-cancel="true" :on-cancel="onCancel"></loading>
     <div class="set-content container">
-      <div v-if="isLoading">
-        <div>Loading...</div>
-      </div>
+      
       <div class="hidden">{{$route.params.id}}</div>
 
       <div class="text-zone">
         <h1 v-if="post2" v-html="post2.Nom_travaux" class="blast-root"></h1>
         <span v-if="post2" v-html="post2.Logiciels_Travaux"></span>
         <p v-if="post2" class="blast-root" v-html="post2.Description_Travaux"></p>
-        <span v-else>LOADING..</span>
+        <!-- <span v-else>LOADING..</span> -->
       </div>
 
       <div v-if="post2">
@@ -25,6 +24,10 @@
 import axios from "axios";
 // import $ from "../node_modules/jquery/dist/jquery.js";
 import VueLazyload from "../../node_modules/vue-lazyload/vue-lazyload.js";
+// Import component
+import Loading from "../../node_modules/vue-loading-overlay/dist/vue-loading.js";
+// Import stylesheet
+import "../../node_modules/vue-loading-overlay/dist/vue-loading.css";
 export default {
   data() {
     return {
@@ -36,31 +39,70 @@ export default {
       isLoading: false
     };
   },
-  methods: {},
+  methods: {
+    submit() {
+      let loader = Vue.$loading.show({
+        // Pass props by their camelCased names
+        container: this.$refs.loadingContainer,
+        canCancel: true, // default false
+        onCancel: this.post2,
+        color: "#000000",
+        loader: "spinner",
+        width: 64,
+        height: 64,
+        backgroundColor: "transparent",
+        opacity: 0.5,
+        zIndex: 999
+      });
+      // simulate AJAX
+      setTimeout(() => {
+        loader.hide();
+      }, 7000);
+    },
+    onCancel() {
+      console.log("User cancelled the loader.");
+    }
+  },
 
   created: function() {
     this.isLoading = true;
-   console.log(this.post2);
+    console.log(this.post2);
     axios
       .get("http://carolinevanaerschot.be/assets/php/travauxGlobal.php")
       .then(res => {
         this.isLoading = false;
         this.post2 = res.data[this.$route.params.id];
         console.log(this.post2);
-
-        
       })
       .catch(err => {
         this.isLoading = false;
         this.error = err;
-           console.log(this.post2);
+        console.log(this.post2);
       });
+  },
+  components: {
+    Loading
   },
 
   mounted: function() {}
 };
 </script>
 <style scoped style="scss">
+body {
+    background: #252627;
+    overflow: visible;
+    display: block;
+    height: 100%;
+}
+#nav_bar {
+    background: #181818;
+    width: 60px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    min-height: 500px;
+}
 .container-fluid {
   color: white;
   left: auto;
@@ -80,10 +122,6 @@ span {
   font-size: 12px;
   letter-spacing: 0.5px;
 }
-.bg-projet {
-  height: 100%;
-  background-color: #181818ba;
-}
 h1 {
   font-size: 53px;
   font-family: font-file-82132;
@@ -96,9 +134,6 @@ h1 {
 .text-zone {
   position: relative;
   left: 0;
-  /* top: 19%; */
-  /* -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); */
   width: 64%;
   vertical-align: middle;
   display: block;
@@ -107,8 +142,8 @@ h1 {
   margin: auto;
 }
 img {
-      max-width: 63%;
-    width: 100%;
+  max-width: 63%;
+  width: 100%;
 }
 @media (max-width: 530px) {
   #nav_bar {
