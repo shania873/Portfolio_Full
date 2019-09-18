@@ -10,10 +10,11 @@
         <h1 v-if="post2" v-html="post2.Nom_travaux" class="blast-root"></h1>
         <span v-if="post2" v-html="post2.Logiciels_Travaux"></span>
         <p v-if="post2" class="blast-root" v-html="post2.Description_Travaux"></p>
+        <span v-else>LOADING..</span>
       </div>
 
-      <div v-if="post2" v-lazy-container="{ selector: 'img' }">
-        <img data-src="post2.img_travaux_2" data-error="xxx.jpg" :src="post2.img_travaux_2" class="img-fluid" />
+      <div v-if="post2">
+        <img :src="post2.img_travaux_2" class="img-fluid" />
         <img :src="post2.img_travaux_3" class="img-fluid" />
         <img :src="post2.img_travaux_4" class="img-fluid" />
       </div>
@@ -23,12 +24,12 @@
 <script>
 import axios from "axios";
 // import $ from "../node_modules/jquery/dist/jquery.js";
-
+import VueLazyload from "../../node_modules/vue-lazyload/vue-lazyload.js";
 export default {
   data() {
     return {
       loading: false,
-      post: null,
+      post2: null,
       isActive: true,
       error: "",
       post2: this.post2,
@@ -39,18 +40,20 @@ export default {
 
   created: function() {
     this.isLoading = true;
-    console.log(this.isLoading);
+   console.log(this.post2);
     axios
       .get("http://carolinevanaerschot.be/assets/php/travauxGlobal.php")
       .then(res => {
         this.isLoading = false;
         this.post2 = res.data[this.$route.params.id];
-        console.log(this.isLoading);
+        console.log(this.post2);
+
+        
       })
       .catch(err => {
-        console.log(this.isLoading);
         this.isLoading = false;
         this.error = err;
+           console.log(this.post2);
       });
   },
 
@@ -69,6 +72,13 @@ p {
 }
 a {
   color: #08fdd8;
+}
+span {
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.5px;
 }
 .bg-projet {
   height: 100%;
@@ -97,13 +107,14 @@ h1 {
   margin: auto;
 }
 img {
-  max-width: 64%;
+      max-width: 63%;
+    width: 100%;
 }
 @media (max-width: 530px) {
   #nav_bar {
     position: relative;
   }
-  .particles{
+  .particles {
     display: none;
   }
 }

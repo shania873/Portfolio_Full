@@ -95,13 +95,13 @@ img {
     vertical-align: bottom
 }
 
-a {
-    color: #444;
-    text-decoration: none
-}
+a{
+    color: #08fdd8;
+    text-decoration: none;
+  }
 
 a:hover {
-    color: #444
+    color: #05c9ab;
 }
 
 a:focus {
@@ -7771,57 +7771,7 @@ body {
     top: 0
 }
 
-	.gallery-wrap {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100vh;
 
-
-.item {
-  flex: 1;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: none;
-  transition: flex 0.8s ease;
-  
-  &:hover{
-    flex: 7;
-  }
-}
-
-.item-1 { 
-  background-image: url('https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80');
-}
-
-.item-2 { 
-  background-image: url('https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80');
-}
-
-.item-3 { 
-  background-image: url('https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80');
-}
-
-.item-4 { 
-  background-image: url('https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80');
-}
-
-.item-5 { 
-  background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80');
-}
-
-.social{
-  position: absolute;
-  right: 35px;
-  bottom: 0;
-  
-  img{
-    display: block;
-    width: 32px;
-  }
-}
-}
 .container {
     width: 100%;
     will-change: contents;
@@ -9504,7 +9454,8 @@ only screen and (min-device-pixel-ratio:1.5) {
         height: auto !important;
         margin: auto
     }
-    #nav_bar {       
+    #nav_bar {     
+       position: relative;  
             img{
                 width: 70%;
             }        
@@ -9538,7 +9489,7 @@ only screen and (min-device-pixel-ratio:1.5) {
     #nav_bar {
         width: 100%;
         height: 60px;
-        position: absolute;
+        // position: absolute;
         top: 0;
         left: 0;
         z-index: 3;
@@ -9820,7 +9771,7 @@ only screen and (min-device-pixel-ratio:1.5) {
     }
 
     #nav_bar {
-        position: fixed
+        // position: fixed
     }
 
     #nav_bar nav {
