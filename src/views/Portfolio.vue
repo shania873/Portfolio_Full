@@ -29,20 +29,20 @@ export default {
   mounted: function() {
   
   },
-  created: function() {
+   created: function() {
     this.loading = true;
-    axios.get("js/db.js")
+    axios.get("http://www.carolinevanaerschot.be/assets/php/travauxGlobal.php")
       .then(res => {
         this.loading = false;
-        // this.todos = res.data;
+        this.post = res.data;
      
-        console.log(res);
+        console.log(this.post);
       })
       .catch(err => {
         this.loading = false;
         this.error = err;
       });
 
-  }
+  },git 
 };
 </script>
