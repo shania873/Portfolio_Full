@@ -10,7 +10,9 @@ import TREE from "three";
 import  "./fusee.js";
 import  "./all.js";
 import "mysql";
-import  "./db.js";
+// import  "./db.js";
+import "./jquery.easing.min.js";
+import "./jquery.magicwall.min.js";
 Vue.config.productionTip = false;
 
 new Vue({
