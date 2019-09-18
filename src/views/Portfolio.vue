@@ -43,6 +43,6 @@ export default {
         this.error = err;
       });
 
-  },git 
+  },
 };
 </script>
