@@ -10,7 +10,7 @@ import TREE from "three";
 import  "./fusee.js";
 import  "./all.js";
 import "mysql";
-import  "./db.js";
+// import  "./db.js";
 Vue.config.productionTip = false;
 
 new Vue({

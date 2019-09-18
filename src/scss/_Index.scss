@@ -7778,7 +7778,7 @@ body {
     height: 90%;
     min-height: 566px;
     position: absolute;
-    opacity: 0;
+    // opacity: 0;
     top: 5%;
     margin: 0 auto;
     z-index: 1;
@@ -9592,7 +9592,7 @@ only screen and (min-device-pixel-ratio:1.5) {
         box-sizing: border-box;
         position: relative;
         top: 0;
-        overflow: hidden
+        overflow: hidden;
     }
 
     .bg {
