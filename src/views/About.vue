@@ -58,7 +58,10 @@ let $ = JQuery;
 import "../../node_modules/particles.js/particles.js";
 import "../particle.js";
 import "../fusee.js";
+import carousel from "vue-owl-carousel";
+
 export default {
+  components: { carousel },
   mounted: function() {
     (function() {
       let gameArea = document.getElementById("environment");
@@ -113,6 +116,7 @@ export default {
         }
         //  document.querySelector('div.planet').style.animationDuration = PlanetSpeed;
       }
+
       changeSpeed();
       addPlanet();
       // addFusee();
@@ -131,14 +135,36 @@ export default {
 </script>
 <style lang="scss">
 @media (max-width: 530px) {
-  #planetset {
+  .container.about {
+    #environment .dust {
+      -webkit-animation: dust 0.9s infinite ease-in;
+      animation: dust 0.9s infinite ease-in;
+      background: rgba(211, 211, 211, 0.36);
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
+      box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
+      height: 12px;
       position: fixed;
-    right: 20%;
-    top: -100%;
-    bottom: 0;
-    opacity: 0.2;
-    z-index: 1;
-    /* display: none; */
+      width: 6px;
+      left: 50%;
+    }
+    #planetset {
+      //   position: fixed;
+      // right: 20%;
+      // top: -100%;
+      // bottom: 0;
+      // opacity: 0.2;
+      // z-index: 1;
+      display: none;
+    }
+    #particles-js2 {
+      position: relative;
+      top: 9px;
+      height: 365px;
+    }
+    .particles{
+      display: none;
+    }
   }
 }
 </style>

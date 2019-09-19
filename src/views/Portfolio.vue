@@ -87,4 +87,7 @@ export default {
 .loading{
 	background-color: red;
 }
+li:hover li::before{
+  background-color:black;
+}
 </style>

@@ -13,9 +13,9 @@
       </div>
 
       <div v-if="post2">
-        <img :src="post2.img_travaux_2" class="img-fluid" />
-        <img :src="post2.img_travaux_3" class="img-fluid" />
-        <img :src="post2.img_travaux_4" class="img-fluid" />
+        <img :src="post2.img_travaux_2"  />
+        <img :src="post2.img_travaux_3"  />
+        <img :src="post2.img_travaux_4"  />
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@ export default {
   mounted: function() {}
 };
 </script>
-<style scoped style="scss">
+<style lang="scss">
 body {
     background: #252627;
     overflow: visible;
@@ -144,6 +144,7 @@ h1 {
 img {
   max-width: 63%;
   width: 100%;
+  margin-bottom:10px;
 }
 @media (max-width: 530px) {
   #nav_bar {
