@@ -70,12 +70,7 @@
           <span>@</span>: vanaeca@hotmail.com
         </span>
       </div>
-      <!-- <div class="map-wrap">
-        <div id="map">
-          <div style="height: 100%; width: 100%;"></div>
-        </div>
-      </div> -->
-    </div>
+     </div>
   </div>
 </template>
 <style lang="scss">

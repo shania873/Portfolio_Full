@@ -2,17 +2,15 @@
   <div id="app">
     <div id="page" class="en">
       <div id="nav_bar">
-        <a class="logo" rel="index" href="https://jacekjeznach.com">
+        <a class="logo" rel="index" href="https://carolinevanaerschot.be">
           <img src="../src/assets/img/logoCaro.svg" alt="logo" />
         </a>
-        <nav id="navbar254">
+        <nav id="navbar">
           <router-link to="/" class="home-link">
             <i class="fas fa-home"></i>
-            <!-- <img src="../src/assets/img/home.svg" alt="home" class="icon-hom" /> -->
           </router-link>
           <router-link to="/about" class>
             <i class="fas fa-user"></i>
-            <!-- <img src="../src/assets/img/about.svg" alt="about" class="icon-prof" /> -->
           </router-link>
           <router-link to="/portfolio" class>
             <i class="far fa-eye"></i>
@@ -23,12 +21,12 @@
         </nav>
         <ul>
           <li>
-            <a href="https://twitter.com/JeznachJacek" target="_blank">
+            <a href="https://github.com/shania873/Portfolio_Full" target="_blank">
               <i class="fab fa-github"></i>
             </a>
           </li>
           <li>
-            <a href="https://pl.linkedin.com/pub/jacek-jeznach/40/9b6/a9" target="_blank">
+            <a href="https://www.linkedin.com/in/caroline-v-65b750113/" target="_blank">
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
@@ -50,19 +48,13 @@ export default {
         element = document.getElementById("navbar254");
         element.classList.toggle("open");
       }
-      document.getElementById("mobile-link").onclick = function() {myFunction(); console.log(element);};   
-     
+      document.getElementById("mobile-link").onclick = function() {
+        myFunction();
+       };
     })();
   }
 };
 </script>
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  height: 100%;
-}
+
 </style>

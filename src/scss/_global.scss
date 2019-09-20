@@ -95,14 +95,6 @@ input:focus {
     position: relative
 }
 
-@font-face {
-    font-family: 'Font-Name';
-    src: url(//jacekjeznach.com/wp-content/themes/jj/fonts/font-name.eot);
-    src: url(//jacekjeznach.com/wp-content/themes/jj/fonts/font-name.eot?#iefix) format('embedded-opentype'), url(//jacekjeznach.com/wp-content/themes/jj/fonts/font-name.woff) format('woff'), url(//jacekjeznach.com/wp-content/themes/jj/fonts/font-name.ttf) format('truetype'), url(//jacekjeznach.com/wp-content/themes/jj/fonts/font-name.svg#font-name) format('svg');
-    font-weight: 400;
-    font-style: normal
-}
-
 ::selection {
     background: #04a4cc;
     color: #fff;
@@ -135,7 +127,10 @@ div.aligncenter {
     float: right;
     margin: 5px 0 20px 20px
 }
-
+.spaceIndex {
+    width: 12px;
+    display: inline-block;
+}
 .alignleft {
     float: left;
     margin: 5px 20px 20px 0

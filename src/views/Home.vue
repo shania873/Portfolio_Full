@@ -31,7 +31,7 @@
 							<br>
 					  	</h1>
 						<h2>Front End Developer / WordPress / Motion design / Infographie 2D</h2></br>
-						<a rel="contact" href="https://jacekjeznach.com/contact/" class="flat-button"> CONTACT ME </a>
+						 <router-link rel="contact" to="/contact" class="flat-button" target="_blank">CONTACT ME</router-link>
 					</div>
 				
 						   
