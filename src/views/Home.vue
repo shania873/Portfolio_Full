@@ -100,24 +100,4 @@ export default {
 }
 </script>
 <style lang="scss">
-@media (max-width: 530px) {
-	.container.home-page {
-			#environment .dust {
-			-webkit-animation: dust .9s infinite ease-in;
-			animation: dust .9s infinite ease-in;
-			background: rgba(211, 211, 211, 0.36);
-			border-radius: 50%;
-			-webkit-box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
-			box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
-			height: 14px;
-			position: fixed;
-			width: 6px;
-			left: 50%;
-		}
-		.particles {
-			opacity: 0.3;
-			display: none;
-		}
-	}
-}
 </style>

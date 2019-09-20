@@ -1,6 +1,6 @@
 <template>
   <div id="page" class="en">
-    <div class="container contact" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+    <div id="contact" class="container contact" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
       <div class="text-zone">
         <h1 aria-label=" Contact me" class="blast-root">
           <span class="blast" aria-hidden="true" style="opacity: 1;">C</span>
@@ -25,9 +25,9 @@
               <li class="half animated fadeInUp">
                 <input
                   class="input__field input__field--hoshi"
-                  placeholder="Name"
+                  placeholder="Nom"
                   type="text"
-                  name="name"
+                  name="nom"
                 />
                 <label class="input__label input__label--hoshi input__label--hoshi-color-2"></label>
               </li>
@@ -78,3 +78,6 @@
     </div>
   </div>
 </template>
+<style lang="scss">
+
+</style>
