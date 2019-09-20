@@ -1,17 +1,30 @@
 //bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
 
-
-@import 'scss/Index';
-// @import 'scss/animation';
+@import 'scss/animate';
+@import 'scss/global';
+@import 'scss/ImgGallery';
+@import 'scss/lostInSpace';
+@import 'scss/mediaPrint';
+@import 'scss/menu';
+@import 'scss/normalize';
 @import 'scss/particle';
 @import 'scss/planet';
+@import 'scss/projet';
 @import 'scss/ship';
 
-@import 'scss/lostInSpace';
+@import 'scss/homepage';
+@import 'scss/about';
+@import 'scss/contact';
 
-@import 'scss/ImgGallery';
-@import 'scss/projet';
 
 
-// @import 'scss/soulignement';
+
+
+
+
+
+
+
+
+
