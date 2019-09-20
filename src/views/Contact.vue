@@ -18,7 +18,7 @@
           <span class="blast" aria-hidden="true" style="opacity: 1;">i</span>
         </h1>
         <p>Si vous avez des questions, ou autre ..</p>
-        
+
         <div class="contact-form">
           <form id="contact" autocomplete="off">
             <ul>
@@ -70,9 +70,29 @@
           <span>@</span>: vanaeca@hotmail.com
         </span>
       </div>
-     </div>
+    </div>
   </div>
 </template>
-<style lang="scss">
-
-</style>
+<script>
+import "../../node_modules/particles.js/particles.js";
+import "../particle.js";
+// import Stats from "../stats.js";
+export default {
+	data: function () {
+		return {}
+	},
+	mounted: function () {
+		$(document).ready(function () {
+			$(".particles").show();
+			$('.blast').on('mouseenter', function (e) {
+				$(this).toggleClass('animated flash');
+			});
+			$('.blast').on('mouseleave', function (e) {
+				$(this).removeClass('animated flash');
+			});
+		});
+		(function () {
+		})();
+	}
+}
+</script>
