@@ -60,23 +60,22 @@
 <script>
 import "../../node_modules/particles.js/particles.js";
 import "../particle.js";
-// import Stats from "../stats.js";
-// import JQuery from "jquery";
-// let $ = JQuery;
+import JQuery from "jquery";
+let $ = JQuery;
 export default {
 	data: function () {
 		return {}
 	},
 	mounted: function () {
-		// $(document).ready(function () {
-		// 	$(".particles").show();
-		// 	$('.blast').on('mouseenter', function (e) {
-		// 		$(this).toggleClass('animated flash');
-		// 	});
-		// 	$('.blast').on('mouseleave', function (e) {
-		// 		$(this).removeClass('animated flash');
-		// 	});
-		// });
+		$(document).ready(function () {
+			$(".particles").show();
+			$('.blast').on('mouseenter', function (e) {
+				$(this).toggleClass('animated flash');
+			});
+			$('.blast').on('mouseleave', function (e) {
+				$(this).removeClass('animated flash');
+			});
+		});
 		(function () {
 			var el;
 			var degrees;

@@ -1,7 +1,7 @@
 <template>
   <div id="page" class="en">
     <div class="container about" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-      <div class="text-zone col-sm-6">
+      <div class="text-zone col-sm-6 col-xs-12">
         <h1 aria-label=" About me" class="blast-root">
           <span class="blast" aria-hidden="true" style="opacity: 1;">A</span>
           <span class="blast" aria-hidden="true" style="opacity: 1;">b</span>
@@ -22,7 +22,7 @@
         <div class="clear"></div>
       </div>
    
-      <div id="planetset" class="col-sm-6">
+      <div id="planetset" class="col-sm-6 col-xs-12">
         <div class="planetPosition">
           <div class="mainPlanet">
             <div class="smallPlanet mars">
@@ -52,8 +52,8 @@
 </template>
 
 <script>
-// import JQuery from "jquery";
-// let $ = JQuery;
+import JQuery from "jquery";
+let $ = JQuery;
 import "../../node_modules/particles.js/particles.js";
 import "../particle.js";
 import "../fusee.js";

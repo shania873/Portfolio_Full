@@ -23,7 +23,8 @@
 <script>
 import axios from "axios";
 // import $ from "../node_modules/jquery/dist/jquery.js";
-
+import JQuery from "jquery";
+let $ = JQuery;
 // Import component
 import Loading from "../../node_modules/vue-loading-overlay/dist/vue-loading.js";
 // Import stylesheet
