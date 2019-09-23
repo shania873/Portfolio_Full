@@ -12,7 +12,7 @@
         <!-- <span v-else>LOADING..</span> -->
       </div>
 
-      <div v-if="post2">
+      <div v-if="post2" class="setprojet">
         <img :src="post2.img_travaux_2"  />
         <img :src="post2.img_travaux_3"  />
         <img :src="post2.img_travaux_4"  />
@@ -142,10 +142,15 @@ h1 {
   right: 0;
   margin: auto;
 }
+.setprojet{
+  text-align: center;
 img {
+  display: inline-block;
+  text-align:center;
   max-width: 63%;
   width: 100%;
   margin-bottom:10px;
+}
 }
 @media (max-width: 530px) {
   #nav_bar {

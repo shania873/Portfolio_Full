@@ -1,5 +1,5 @@
 <template>
-  <div id="page" class="en">
+  <div id="page" class="fr">
     <div
       id="contact"
       class="container contact"

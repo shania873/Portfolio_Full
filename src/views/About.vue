@@ -1,5 +1,5 @@
 <template>
-  <div id="page" class="en">
+  <div id="page" class="fr">
     <div class="container about" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
       <div class="text-zone col-sm-6 col-xs-12">
         <h1 aria-label=" About me" class="blast-root">
@@ -22,7 +22,7 @@
         <div class="clear"></div>
       </div>
    
-      <div id="planetset" class="col-sm-6 col-xs-12">
+      <div id="planetset" class="col-sm-6">
         <div class="planetPosition">
           <div class="mainPlanet">
             <div class="smallPlanet mars">
@@ -111,28 +111,29 @@ export default {
         PlanetSpeed = "1900ms";
         if (x) {
           PlanetSpeed = x + "ms";
-        }
-        //  document.querySelector('div.planet').style.animationDuration = PlanetSpeed;
+        }        
       }
 
       changeSpeed();
       addPlanet();
-      // addFusee();
-      //  playGame();
+
     })();
-    // $(document).ready(function() {
-    //   $(".blast").on("mouseenter", function(e) {
-    //     $(this).toggleClass("animated flash");
-    //   });
-    //   $(".blast").on("mouseleave", function(e) {
-    //     $(this).removeClass("animated flash");
-    //   });
-    // });
+    $(document).ready(function() {
+      $(".blast").on("mouseenter", function(e) {
+        $(this).toggleClass("animated flash");
+      });
+      $(".blast").on("mouseleave", function(e) {
+        $(this).removeClass("animated flash");
+      });
+    });
   }
 };
 </script>
 <style lang="scss">
 @media (max-width: 530px) {
+  #planetset{
+    display:none;
+  }
  
 }
 </style>
