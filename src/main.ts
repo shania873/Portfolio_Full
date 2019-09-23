@@ -5,9 +5,9 @@ import store from "./store";
 import "./style.scss";
 // import JQuery from "jquery";
 // let $ = JQuery;
-import "bootstrap";
+// import "bootstrap";
 import "./all.js";
-import "mysql";
+
 Vue.config.productionTip = false;
 new Vue({
   router,
