@@ -41,8 +41,8 @@
 	<div class="stars">
 		<div class="objects">
 			<div class="earth-moon">
-				<img class="object_earth" src="http://carolinevanaerschot.be/assets/img/earth.svg" width="100px">
-				<img class="object_moon" src="http://carolinevanaerschot.be/assets/img/moon.svg" width="80px">
+				<img class="object_earth" src="http://carolinevanaerschot.be/img/earth.svg" width="100px">
+				<img class="object_moon" src="http://carolinevanaerschot.be/img/moon.svg" width="80px">
 			</div>
 			<div class="boxset">		
 			</div>
@@ -61,20 +61,22 @@
 import "../../node_modules/particles.js/particles.js";
 import "../particle.js";
 // import Stats from "../stats.js";
+// import JQuery from "jquery";
+// let $ = JQuery;
 export default {
 	data: function () {
 		return {}
 	},
 	mounted: function () {
-		$(document).ready(function () {
-			$(".particles").show();
-			$('.blast').on('mouseenter', function (e) {
-				$(this).toggleClass('animated flash');
-			});
-			$('.blast').on('mouseleave', function (e) {
-				$(this).removeClass('animated flash');
-			});
-		});
+		// $(document).ready(function () {
+		// 	$(".particles").show();
+		// 	$('.blast').on('mouseenter', function (e) {
+		// 		$(this).toggleClass('animated flash');
+		// 	});
+		// 	$('.blast').on('mouseleave', function (e) {
+		// 		$(this).removeClass('animated flash');
+		// 	});
+		// });
 		(function () {
 			var el;
 			var degrees;
@@ -91,10 +93,10 @@ export default {
 				var degrees = Math.floor((Math.random() * 360) + 1);
 				el.style.transform = 'rotate(' + degrees + 'deg)';
 			}
-			document.querySelector(".object_astronaut0").src = "http://carolinevanaerschot.be/assets/img/starbucks.png";
-			document.querySelector(".object_astronaut1").src = "http://carolinevanaerschot.be/assets/img/ecran.png";
-			document.querySelector(".object_astronaut2").src = "http://carolinevanaerschot.be/assets/img/chaise.png";
-			document.querySelector(".object_astronaut3").src = "http://carolinevanaerschot.be/assets/img/plante.png";
+			document.querySelector(".object_astronaut0").src = "http://carolinevanaerschot.be/img/starbucks.png";
+			document.querySelector(".object_astronaut1").src = "http://carolinevanaerschot.be/img/ecran.png";
+			document.querySelector(".object_astronaut2").src = "http://carolinevanaerschot.be/img/chaise.png";
+			document.querySelector(".object_astronaut3").src = "http://carolinevanaerschot.be/img/plante.png";
 		})();
 	}
 }

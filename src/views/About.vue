@@ -1,7 +1,7 @@
 <template>
   <div id="page" class="en">
     <div class="container about" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-      <div class="text-zone">
+      <div class="text-zone col-sm-6">
         <h1 aria-label=" About me" class="blast-root">
           <span class="blast" aria-hidden="true" style="opacity: 1;">A</span>
           <span class="blast" aria-hidden="true" style="opacity: 1;">b</span>
@@ -21,47 +21,45 @@
         </p>
         <div class="clear"></div>
       </div>
-      <div id="environment"></div>
-      <section id="planetset">
+   
+      <div id="planetset" class="col-sm-6">
         <div class="planetPosition">
-          <div class="far-orbit"></div>
-          <div class="near-orbit"></div>
           <div class="mainPlanet">
             <div class="smallPlanet mars">
-              <img src="http://carolinevanaerschot.be/assets/img/AboutIcon-css.svg" />
+              <img src="http://carolinevanaerschot.be/img/AboutIcon-css.svg" />
             </div>
             <div class="smallPlanet saturn">
-              <img src="http://carolinevanaerschot.be/assets/img/AboutIcon-html.svg" />
+              <img src="http://carolinevanaerschot.be/img/AboutIcon-html.svg" />
             </div>
             <div class="smallPlanet planet-x">
-              <img src="http://carolinevanaerschot.be/assets/img/AboutIcon-illustrator.svg" />
+              <img src="http://carolinevanaerschot.be/img/AboutIcon-illustrator.svg" />
             </div>
             <div class="smallPlanet mars2">
-              <img src="http://carolinevanaerschot.be/assets/img/AboutIcon-javascript.svg" />
+              <img src="http://carolinevanaerschot.be/img/AboutIcon-javascript.svg" />
             </div>
             <div class="smallPlanet saturn2">
-              <img src="http://carolinevanaerschot.be/assets/img/AboutIcon-photoshop.svg" />
+              <img src="http://carolinevanaerschot.be/img/AboutIcon-photoshop.svg" />
             </div>
             <div class="smallPlanet planet-x2">
-              <img src="http://carolinevanaerschot.be/assets/img/AboutIcon-svg.svg" />
+              <img src="http://carolinevanaerschot.be/img/AboutIcon-svg.svg" />
             </div>
           </div>
         </div>
-      </section>
+      </div>
+         <div id="environment"></div>
     </div>
   </div>
 </template>
 
 <script>
-import JQuery from "jquery";
-let $ = JQuery;
+// import JQuery from "jquery";
+// let $ = JQuery;
 import "../../node_modules/particles.js/particles.js";
 import "../particle.js";
 import "../fusee.js";
-import carousel from "vue-owl-carousel";
+
 
 export default {
-  components: { carousel },
   mounted: function() {
     (function() {
       let gameArea = document.getElementById("environment");
@@ -122,14 +120,14 @@ export default {
       // addFusee();
       //  playGame();
     })();
-    $(document).ready(function() {
-      $(".blast").on("mouseenter", function(e) {
-        $(this).toggleClass("animated flash");
-      });
-      $(".blast").on("mouseleave", function(e) {
-        $(this).removeClass("animated flash");
-      });
-    });
+    // $(document).ready(function() {
+    //   $(".blast").on("mouseenter", function(e) {
+    //     $(this).toggleClass("animated flash");
+    //   });
+    //   $(".blast").on("mouseleave", function(e) {
+    //     $(this).removeClass("animated flash");
+    //   });
+    // });
   }
 };
 </script>

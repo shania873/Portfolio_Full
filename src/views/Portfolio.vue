@@ -19,13 +19,12 @@
 <script>
 import axios from "axios";
 // import $ from "../node_modules/jquery/dist/jquery.js";
-import VueLazyload from "../../node_modules/vue-lazyload/vue-lazyload.js";
+
 // Import component
 import Loading from "../../node_modules/vue-loading-overlay/dist/vue-loading.js";
 // Import stylesheet
 import "../../node_modules/vue-loading-overlay/dist/vue-loading.css";
-import VueGallery from "../../node_modules/vue-gallery/src/index.js";
-import { store, Photos, Theater } from "vuejs-carousel";
+
 export default {
   data: function() {
     return {
@@ -59,14 +58,14 @@ export default {
       }, 7000);
     },
     onCancel() {
-      console.log("User cancelled the loader.");
+
     }
   },
    created: function() {
     this.isLoading = true;
  
     axios
-      .get("http://carolinevanaerschot.be/assets/php/travauxGlobal.php")
+      .get("http://carolinevanaerschot.be/php/travauxGlobal.php")
       .then(res => {
         this.isLoading = false;
         this.post = res.data;
@@ -84,10 +83,5 @@ export default {
 };
 </script>
 <style scoped style="scss">
-.loading{
-	background-color: red;
-}
-li:hover li::before{
-  background-color:black;
-}
+
 </style>

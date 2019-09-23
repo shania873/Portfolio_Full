@@ -45,7 +45,7 @@ export default {
     (function() {
       var element;
       function myFunction() {
-        element = document.getElementById("navbar254");
+        element = document.getElementById("navbar");
         element.classList.toggle("open");
       }
       document.getElementById("mobile-link").onclick = function() {

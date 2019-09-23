@@ -8,7 +8,12 @@
     text-rendering: optimizeLegibility;
     // border:solid 1px red;
 }
-
+#goodresult,#badresult{
+        display: block;
+    color: white;
+    font-size: 14px;
+    max-width: 50%;
+}
 html {
     font-size: 62.5%
 }
@@ -588,6 +593,14 @@ body {
 }
 
 @media (min-width:1100px) and (min-height:900px) {
+    #environment{
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
     h1 {
         font-size: 73px !important;
         line-height: 67px !important
@@ -626,9 +639,7 @@ body {
 }
 
 @media (min-width:960px) and (max-height:800px) {
-    .container.about .text-zone img {
-        display: none
-    }
+ 
 }
 
 @media (max-width:1024px) {
@@ -686,25 +697,18 @@ body {
 }
 
 @media (max-width:800px) and (orientation :landscape) {
-    #rotate {
-        position: fixed;
-        background: #212121 url(//jacekjeznach.com/wp-content/themes/jj/css/../img/rotate.jpg) no-repeat center;
-        background-size: 100% auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 9999999999999;
-        display: blocks!important;
-        opacity: 1 !important
-    }
+  
 
-    #page {
-        display: none !important
-    }
+
+}
+@media (max-width:800px) {
+  
+
 }
 
+
 @media (max-width:960px) {
+ 
     #world {
         position: relative !important;
         width: 90% !important;
@@ -962,21 +966,25 @@ body {
 
 @media (max-width:530px) {
     .container.about {
-        #environment .dust {
-          -webkit-animation: dust 0.9s infinite ease-in;
-          animation: dust 0.9s infinite ease-in;
-          background: rgba(211, 211, 211, 0.36);
-          border-radius: 50%;
-          -webkit-box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
-          box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
-          height: 12px;
-          position: fixed;
-          width: 6px;
-          left: 50%;
-        }
-        #planetset {
-           display: none;
-        }
+        #environment{
+            display: none;
+         
+            .dust {
+                -webkit-animation: dust 0.9s infinite ease-in;
+                animation: dust 0.9s infinite ease-in;
+                background: rgba(211, 211, 211, 0.36);
+                border-radius: 50%;
+                -webkit-box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
+                box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
+                height: 12px;
+                position: fixed;
+                width: 6px;
+                left: 50%;
+              }
+        } 
+        // #planetset {
+        //    display: none;
+        // }
         #particles-js2 {
           position: relative;
           top: 9px;

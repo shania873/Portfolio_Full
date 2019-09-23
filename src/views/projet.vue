@@ -23,7 +23,7 @@
 <script>
 import axios from "axios";
 // import $ from "../node_modules/jquery/dist/jquery.js";
-import VueLazyload from "../../node_modules/vue-lazyload/vue-lazyload.js";
+
 // Import component
 import Loading from "../../node_modules/vue-loading-overlay/dist/vue-loading.js";
 // Import stylesheet
@@ -68,7 +68,7 @@ export default {
     this.isLoading = true;
     console.log(this.post2);
     axios
-      .get("http://carolinevanaerschot.be/assets/php/travauxGlobal.php")
+      .get("http://carolinevanaerschot.be/php/travauxGlobal.php")
       .then(res => {
         this.isLoading = false;
         this.post2 = res.data[this.$route.params.id];
@@ -87,7 +87,7 @@ export default {
   mounted: function() {}
 };
 </script>
-<style lang="scss">
+<style scoped lang="scss">
 body {
     background: #252627;
     overflow: visible;
