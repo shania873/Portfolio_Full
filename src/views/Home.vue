@@ -1,5 +1,5 @@
 <template>
-	<transition>
+
 
 			<div class="container home-page" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
 					<div class="text-zone">
@@ -31,7 +31,7 @@
 							<br>
 					  	</h1>
 						<h2>Front End Developer / WordPress / Motion design / Infographie 2D</h2></br>
-						 <router-link rel="contact" to="/contact" class="flat-button" target="_blank">CONTACT ME</router-link>
+						 <router-link rel="contact" to="/contact" class="flat-button" target="_blank">CONTACTEZ MOI</router-link>
 					</div>
 				
 						   
@@ -53,7 +53,7 @@
 
 <div class="bg" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
 </div>
-</transition>
+
 </template>
 
 
@@ -100,5 +100,7 @@ export default {
 	}
 }
 </script>
-<style lang="scss">
+<style scoped lang="scss">
+
+
 </style>

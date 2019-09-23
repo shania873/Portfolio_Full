@@ -7,7 +7,7 @@ import JQuery from "jquery";
 let $ = JQuery;
 import "bootstrap";
 import "./all.js";
-
+import "./pace.js";
 Vue.config.productionTip = false;
 new Vue({
   router,
@@ -15,13 +15,13 @@ new Vue({
   render: h => h(App),
 
   mounted: function() {
-    // $(document).ready(function() {
-    //   $(".blast").on("mouseenter", function(e) {
-    //     $(this).toggleClass("animated rubberBand");
-    //   });
-    //   $(".blast").on("mouseleave", function(e) {
-    //     $(this).removeClass("animated rubberBand");
-    //   });
-    // });
+    $(document).ready(function() {
+      $(".blast").on("mouseenter", function(e) {
+        $(this).toggleClass("animated rubberBand");
+      });
+      $(".blast").on("mouseleave", function(e) {
+        $(this).removeClass("animated rubberBand");
+      });
+    });
   }
 }).$mount("#app");

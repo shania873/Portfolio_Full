@@ -129,11 +129,12 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style scoped>
 @media (max-width: 530px) {
   #planetset{
     display:none;
   }
  
 }
+
 </style>

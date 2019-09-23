@@ -221,3 +221,10 @@ created: function() {},
   }
 };
 </script>
+<style scoped lang="scss">
+.particles{
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+</style>
