@@ -58,8 +58,6 @@
 
 
 <script>
-import "../../node_modules/particles.js/particles.js";
-import "../particle.js";
 import JQuery from "jquery";
 let $ = JQuery;
 export default {

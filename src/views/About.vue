@@ -25,37 +25,37 @@
       <div id="planetset" class="col-sm-6">
         <div class="planetPosition">
           <div class="mainPlanet">
-            <div class="smallPlanet mars">
+            <div class="smallPlanet css">
               <img src="http://carolinevanaerschot.be/img/AboutIcon-css.svg" />
             </div>
-            <div class="smallPlanet saturn">
+            <div class="smallPlanet html">
               <img src="http://carolinevanaerschot.be/img/AboutIcon-html.svg" />
             </div>
-            <div class="smallPlanet planet-x">
+            <div class="smallPlanet illustrator">
               <img src="http://carolinevanaerschot.be/img/AboutIcon-illustrator.svg" />
             </div>
-            <div class="smallPlanet mars2">
+            <div class="smallPlanet javascript">
               <img src="http://carolinevanaerschot.be/img/AboutIcon-javascript.svg" />
             </div>
-            <div class="smallPlanet saturn2">
+            <div class="smallPlanet photoshop">
               <img src="http://carolinevanaerschot.be/img/AboutIcon-photoshop.svg" />
             </div>
-            <div class="smallPlanet planet-x2">
+            <div class="smallPlanet svg">
               <img src="http://carolinevanaerschot.be/img/AboutIcon-svg.svg" />
             </div>
           </div>
         </div>
       </div>
-         <div id="environment"></div>
+        
     </div>
+       <div id="environment"></div>
   </div>
+
 </template>
 
 <script>
 import JQuery from "jquery";
 let $ = JQuery;
-import "../../node_modules/particles.js/particles.js";
-import "../particle.js";
 import "../fusee.js";
 
 
@@ -64,35 +64,42 @@ export default {
     (function() {
       let gameArea = document.getElementById("environment");
       let i;
-      let y;
+      let y = 10;
       let ship = document.querySelector("#ship");
-      let x = 1200;
-      let PlanetSpeed = 10;
+      let x = 10;
+      let PlanetSpeed;
       let pos;
       let delay;
-      //   let posFusee;
-      //  let delayFusee;
-      addPlanet(10);
-      //  addFusee(10);
-      // function addFusee(x) {
-      //   for (y = 0; y < 2; y++) {
-      //     let FuseeItem = document.createElement("div");
-      //     FuseeItem.id = "ship";
-      //     FuseeItem.className = "USSEnterprise";
-      //     posFusee = Math.floor(Math.random() * $(window).width()) + "px";
-      //     delayFusee = Math.random() * 2000;
-      //     FuseeItem.style.animationDelay = delay + "ms";
-      //     FuseeItem.style.animationDuration = PlanetSpeed;
-      //     FuseeItem.style.left = posFusee;
-      //     FuseeItem.style.top = posFusee;
-      //     // el.style.top = Math.floor((Math.random() * 600) + 1) + "px";
-      //     //  FuseeItem.appendTo('#environment');
-      //     document.getElementById("environment").appendChild(FuseeItem);
-      //     changeSpeed();
-      //     console.log(FuseeItem);
-      //   }
-      // }
-      function addPlanet(x) {
+      let posStars;
+      let delayStars;
+      let StarsSpeed;
+      let addStars;
+       addPlanet(10);
+       Stars(10);
+      var interval = setInterval(Stars, 20000 , 3);
+   
+      function Stars(y) {   
+        clearInterval(interval);     
+        for (y = 0; y < 25; y++) {
+          addStars = document.createElement("div");
+          addStars.className = "setstars";
+          let posStarsY = Math.floor(Math.random() * $(window).width()) + "px";
+          let posStarsX = Math.floor(Math.random() * $(window).height()) + "px";
+          let opacityStars = Math.random();
+          delayStars = Math.random() * 6000;
+          addStars.style.animationDelay = delayStars + "ms";
+          addStars.style.animationDuration = StarsSpeed;
+          addStars.style.left = posStarsY;
+          addStars.style.top = posStarsX;
+          addStars.style.opacity = opacityStars;
+        
+         
+          document.getElementById("environment").appendChild(addStars);
+          changeSpeed();
+          console.log(opacityStars);
+        }
+      }
+      function addPlanet(x) {        
         for (i = 0; i < 8; i++) {
           let particleItem = document.createElement("div");
           particleItem.className = "dust";
@@ -106,21 +113,25 @@ export default {
           changeSpeed();
         }
       }
-
-      function changeSpeed(x) {
-        PlanetSpeed = "1900ms";
-        if (x) {
+   
+      function changeSpeed(x , y) {
+         PlanetSpeed = "1900ms";
+         StarsSpeed = "5000ms";
+        if (x,y) {
           PlanetSpeed = x + "ms";
+          StarsSpeed = y + "ms";
         }        
       }
-
+     
       changeSpeed();
       addPlanet();
+      // Stars();
 
     })();
     $(document).ready(function() {
       $(".blast").on("mouseenter", function(e) {
         $(this).toggleClass("animated flash");
+    
       });
       $(".blast").on("mouseleave", function(e) {
         $(this).removeClass("animated flash");
@@ -129,12 +140,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-@media (max-width: 530px) {
-  #planetset{
-    display:none;
-  }
- 
-}
-
-</style>

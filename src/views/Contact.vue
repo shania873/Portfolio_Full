@@ -94,9 +94,6 @@
 </template>
 <script>
 import axios from "axios";
-import "../../node_modules/particles.js/particles.js";
-import "../particle.js";
-// import $ from "../../node_modules/jquery/dist/jquery.js";
 import JQuery from "jquery";
 let $ = JQuery;
 export default {

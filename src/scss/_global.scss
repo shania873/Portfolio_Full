@@ -419,17 +419,7 @@ body {
     animation-duration: 2s
 }
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #151617;
-    background-image: url(http://vincentgarreau.com/particles.js/assets/img/kbLd9vb_new.gif);
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: 100% 100%;
-    opacity: 0.4;
-}
+
 
 #mobile-link {
     display: none
@@ -868,23 +858,18 @@ body {
         box-sizing: border-box;
         position: relative;
         top: 0;
-        overflow: hidden;
+        // overflow: hidden;
+        height: 100vh;
     }
-
+    .mainPlanet {
+   
+        height: 23%;
+     
+    }
     .bg {
         right: 0;
         left: 0;
         opacity: .5
-    }
-
-    .container.gallery {
-        position: absolute;
-        min-height: 1200px
-    }
-
-    .magicwall .magicwall-grid {
-        margin-left: 0;
-        margin-top: 60px
     }
 
     .tags {
@@ -923,31 +908,10 @@ body {
         min-height: 0
     }
 
-    #myCanvasContainer {
-        position: relative;
-        margin: 0 10% !important;
-        top: 0 !important;
-        left: 0 !important;
-        display: block;
-        clear: both;
-        width: 80%;
-        height: auto
-    }
+   
 
-    #myCanvas {
-        position: relative;
-        width: 100%;
-        margin: 0
-    }
-
-    body {
-        overflow: auto
-    }
-
-    .blog-link {
-        display: none
-    }
-
+  
+   
     .container.contact .text-zone {
         width: 80%
     }
@@ -982,36 +946,7 @@ body {
     }
 }
 
-@media (max-width:530px) {
-    .container.about {
-        #environment{
-            display: none;
-         
-            .dust {
-                -webkit-animation: dust 0.9s infinite ease-in;
-                animation: dust 0.9s infinite ease-in;
-                background: rgba(211, 211, 211, 0.36);
-                border-radius: 50%;
-                -webkit-box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
-                box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
-                height: 12px;
-                position: fixed;
-                width: 6px;
-                left: 50%;
-              }
-        } 
-        // #planetset {
-        //    display: none;
-        // }
-        #particles-js2 {
-          position: relative;
-          top: 9px;
-          height: 365px;
-        }
-        // .particles{
-        //   display: none;
-        // }
-      }
+@media (max-width:530px) {   
     .container.home-page {
         #environment .dust {
         -webkit-animation: dust .9s infinite ease-in;
