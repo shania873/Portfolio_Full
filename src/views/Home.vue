@@ -1,7 +1,5 @@
 <template>
-
-
-			<div class="container home-page" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+		<div class="container home-page" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
 					<div class="text-zone">
 						<h1 aria-label=" Hi, I’m ack,web developer." class="blast-root">
 							<span class="blast" aria-hidden="true" style="opacity: 1;">H</span>
@@ -27,33 +25,27 @@
 							<span class="blast" aria-hidden="true" style="opacity: 1;">i</span>
 							<span class="blast" aria-hidden="true" style="opacity: 1;">n</span>
 							<span class="blast" aria-hidden="true" style="opacity: 1;">e</span>
-        					<!-- <span class="blast" aria-hidden="true" style="opacity: 1;">,</span> -->
-							<br>
+        	    			<br>
 					  	</h1>
 						<h2>Front End Developer / WordPress / Motion design / Infographie 2D</h2></br>
 						 <router-link rel="contact" to="/contact" class="flat-button" target="_blank">CONTACTEZ MOI</router-link>
+					</div>		
+					<div class="bg-purple">
+						<div class="stars">
+							<div class="objects">
+								<div class="earth-moon">
+									<img class="object_earth" src="http://carolinevanaerschot.be/img/earth.svg" width="100px">
+									<img class="object_moon" src="http://carolinevanaerschot.be/img/moon.svg" width="80px">
+								</div>
+								<div class="boxset">		
+								</div>
+
+							</div>
+						</div>
 					</div>
-				
-						   
- 
-		  
-<div class="bg-purple">
-	<div class="stars">
-		<div class="objects">
-			<div class="earth-moon">
-				<img class="object_earth" src="http://carolinevanaerschot.be/img/earth.svg" width="100px">
-				<img class="object_moon" src="http://carolinevanaerschot.be/img/moon.svg" width="80px">
-			</div>
-			<div class="boxset">		
-			</div>
-
-		</div>
-	</div>
-</div>
-
-<div class="bg" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
-</div>
-
+					<div id="environment"></div>
+					<div class="bg" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+				</div>
 </template>
 
 
@@ -65,6 +57,72 @@ export default {
 		return {}
 	},
 	mounted: function () {
+		(function () {
+			let i;
+			let y = 10;
+			let ship = document.querySelector("#ship");
+			let x = 10;
+			let PlanetSpeed;
+			let pos;
+			let delay;
+			let posStars;
+			let delayStars;
+			let StarsSpeed;
+			let addStars;
+			addPlanet(10);
+			Stars(10);
+			var interval = setInterval(Stars, 20000, 3);
+
+			function Stars(y) {
+				clearInterval(interval);
+				for (y = 0; y < 25; y++) {
+					addStars = document.createElement("div");
+					addStars.className = "setstars";
+					let posStarsY = Math.floor(Math.random() * window.innerWidth) + "px";
+					let posStarsX = Math.floor(Math.random() * window.innerHeight) + "px";
+					let opacityStars = Math.random();
+					delayStars = Math.random() * 6000;
+					addStars.style.animationDelay = delayStars + "ms";
+					addStars.style.animationDuration = StarsSpeed;
+					addStars.style.left = posStarsY;
+					addStars.style.top = posStarsX;
+					addStars.style.opacity = opacityStars;
+
+					document.getElementById("environment").appendChild(addStars);
+					changeSpeed();
+
+				}
+			}
+
+			function addPlanet(x) {
+				for (i = 0; i < 8; i++) {
+					let particleItem = document.createElement("div");
+					particleItem.className = "dust";
+					pos = Math.floor(Math.random() * window.innerWidth) + "px";
+					delay = Math.random() * 2000;
+					particleItem.style.animationDelay = delay + "ms";
+					particleItem.style.animationDuration = PlanetSpeed;
+					particleItem.style.left = pos;
+					particleItem.style.top = pos;
+					document.getElementById("environment").appendChild(particleItem);
+					changeSpeed();
+				}
+			}
+
+			function changeSpeed(x, y) {
+				PlanetSpeed = "5000ms";
+				StarsSpeed = "9000ms";
+				if ((x, y)) {
+					PlanetSpeed = x + "ms";
+					StarsSpeed = y + "ms";
+				}
+			}
+
+			changeSpeed();
+			addPlanet();
+
+		})();
+
 		$(document).ready(function () {
 			$(".particles").show();
 			$('.blast').on('mouseenter', function (e) {

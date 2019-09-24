@@ -2,7 +2,6 @@
   <div id="projet" class="bg-projet">
     <loading :active.sync="isLoading" :can-cancel="true" :on-cancel="onCancel"></loading>
     <div class="set-content container">
-      
       <div class="hidden">{{$route.params.id}}</div>
 
       <div class="text-zone">
@@ -13,22 +12,21 @@
       </div>
 
       <div v-if="post2" class="setprojet">
-        <img :src="post2.img_travaux_2"  />
-        <img :src="post2.img_travaux_3"  />
-        <img :src="post2.img_travaux_4"  />
+        <img :src="post2.img_travaux_2" />
+        <img :src="post2.img_travaux_3" />
+        <img :src="post2.img_travaux_4" />
       </div>
     </div>
+     <div id="environment"></div>
   </div>
 </template>
 <script>
 import axios from "axios";
-// import $ from "../node_modules/jquery/dist/jquery.js";
 import JQuery from "jquery";
 let $ = JQuery;
-// Import component
 import Loading from "../../node_modules/vue-loading-overlay/dist/vue-loading.js";
-// Import stylesheet
 import "../../node_modules/vue-loading-overlay/dist/vue-loading.css";
+
 export default {
   data() {
     return {
@@ -43,9 +41,8 @@ export default {
   methods: {
     submit() {
       let loader = Vue.$loading.show({
-        // Pass props by their camelCased names
         container: this.$refs.loadingContainer,
-        canCancel: true, // default false
+        canCancel: true,
         onCancel: this.post2,
         color: "#000000",
         loader: "spinner",
@@ -55,54 +52,118 @@ export default {
         opacity: 0.5,
         zIndex: 999
       });
-      // simulate AJAX
+
       setTimeout(() => {
         loader.hide();
       }, 7000);
     },
-    onCancel() {
-      console.log("User cancelled the loader.");
-    }
+    onCancel() {}
   },
+mounted: function() {
+    	(function () {
+			let i;
+			let y = 10;
+			let ship = document.querySelector("#ship");
+			let x = 10;
+			let PlanetSpeed;
+			let pos;
+			let delay;
+			let posStars;
+			let delayStars;
+			let StarsSpeed;
+			let addStars;
+			addPlanet(10);
+			Stars(10);
+			var interval = setInterval(Stars, 20000, 3);
 
+			function Stars(y) {
+				clearInterval(interval);
+				for (y = 0; y < 25; y++) {
+					addStars = document.createElement("div");
+					addStars.className = "setstars";
+					let posStarsY = Math.floor(Math.random() * window.innerWidth) + "px";
+					let posStarsX = Math.floor(Math.random() * window.innerHeight) + "px";
+					let opacityStars = Math.random();
+					delayStars = Math.random() * 6000;
+					addStars.style.animationDelay = delayStars + "ms";
+					addStars.style.animationDuration = StarsSpeed;
+					addStars.style.left = posStarsY;
+					addStars.style.top = posStarsX;
+					addStars.style.opacity = opacityStars;
+
+					document.getElementById("environment").appendChild(addStars);
+					changeSpeed();
+
+				}
+			}
+
+			function addPlanet(x) {
+				for (i = 0; i < 8; i++) {
+					let particleItem = document.createElement("div");
+					particleItem.className = "dust";
+					pos = Math.floor(Math.random() * window.innerWidth) + "px";
+					delay = Math.random() * 2000;
+					particleItem.style.animationDelay = delay + "ms";
+					particleItem.style.animationDuration = PlanetSpeed;
+					particleItem.style.left = pos;
+					particleItem.style.top = pos;
+					document.getElementById("environment").appendChild(particleItem);
+					changeSpeed();
+				}
+			}
+
+			function changeSpeed(x, y) {
+				PlanetSpeed = "5000ms";
+				StarsSpeed = "9000ms";
+				if ((x, y)) {
+					PlanetSpeed = x + "ms";
+					StarsSpeed = y + "ms";
+				}
+			}
+
+			changeSpeed();
+			addPlanet();
+
+		})();
+  },
   created: function() {
     this.isLoading = true;
-    console.log(this.post2);
+
     axios
       .get("http://carolinevanaerschot.be/php/travauxGlobal.php")
       .then(res => {
         this.isLoading = false;
         this.post2 = res.data[this.$route.params.id];
-        console.log(this.post2);
+ 
       })
       .catch(err => {
         this.isLoading = false;
         this.error = err;
-        console.log(this.post2);
+   
       });
   },
   components: {
     Loading
-  },
+  }
 
-  mounted: function() {}
+  
 };
 </script>
 <style scoped lang="scss">
 body {
-    background: #252627;
-    overflow: visible;
-    display: block;
-    height: 100%;
+  background: #252627;
+  overflow: visible;
+  display: block;
+  height: 100%;
 }
 #nav_bar {
-    background: #181818;
-    width: 60px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    min-height: 500px;
+  background: #181818;
+  width: 60px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  min-height: 500px;
 }
 .container-fluid {
   color: white;
@@ -142,15 +203,15 @@ h1 {
   right: 0;
   margin: auto;
 }
-.setprojet{
+.setprojet {
   text-align: center;
-img {
-  display: inline-block;
-  text-align:center;
-  max-width: 63%;
-  width: 100%;
-  margin-bottom:10px;
-}
+  img {
+    display: inline-block;
+    text-align: center;
+    max-width: 63%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 530px) {
   #nav_bar {

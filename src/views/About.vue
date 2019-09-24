@@ -21,7 +21,7 @@
         </p>
         <div class="clear"></div>
       </div>
-   
+
       <div id="planetset" class="col-sm-6">
         <div class="planetPosition">
           <div class="mainPlanet">
@@ -46,26 +46,20 @@
           </div>
         </div>
       </div>
-        
     </div>
-       <div id="environment"></div>
+    <div id="environment"></div>
   </div>
-
 </template>
 
 <script>
 import JQuery from "jquery";
 let $ = JQuery;
-import "../fusee.js";
-
 
 export default {
   mounted: function() {
     (function() {
-      let gameArea = document.getElementById("environment");
       let i;
       let y = 10;
-      let ship = document.querySelector("#ship");
       let x = 10;
       let PlanetSpeed;
       let pos;
@@ -74,17 +68,17 @@ export default {
       let delayStars;
       let StarsSpeed;
       let addStars;
-       addPlanet(10);
-       Stars(10);
-      var interval = setInterval(Stars, 20000 , 3);
-   
-      function Stars(y) {   
-        clearInterval(interval);     
+      addPlanet(10);
+      Stars(10);
+      var interval = setInterval(Stars, 20000, 3);
+
+      function Stars(y) {
+        clearInterval(interval);
         for (y = 0; y < 25; y++) {
           addStars = document.createElement("div");
           addStars.className = "setstars";
-          let posStarsY = Math.floor(Math.random() * $(window).width()) + "px";
-          let posStarsX = Math.floor(Math.random() * $(window).height()) + "px";
+          let posStarsY = Math.floor(Math.random() * window.innerWidth) + "px";
+          let posStarsX = Math.floor(Math.random() * window.innerHeight) + "px";
           let opacityStars = Math.random();
           delayStars = Math.random() * 6000;
           addStars.style.animationDelay = delayStars + "ms";
@@ -92,18 +86,16 @@ export default {
           addStars.style.left = posStarsY;
           addStars.style.top = posStarsX;
           addStars.style.opacity = opacityStars;
-        
-         
+
           document.getElementById("environment").appendChild(addStars);
           changeSpeed();
-          console.log(opacityStars);
         }
       }
-      function addPlanet(x) {        
+      function addPlanet(x) {
         for (i = 0; i < 8; i++) {
           let particleItem = document.createElement("div");
           particleItem.className = "dust";
-          pos = Math.floor(Math.random() * $(window).width()) + "px";
+          pos = Math.floor(Math.random() * window.innerWidth) + "px";
           delay = Math.random() * 2000;
           particleItem.style.animationDelay = delay + "ms";
           particleItem.style.animationDuration = PlanetSpeed;
@@ -113,25 +105,23 @@ export default {
           changeSpeed();
         }
       }
-   
-      function changeSpeed(x , y) {
-         PlanetSpeed = "1900ms";
-         StarsSpeed = "5000ms";
-        if (x,y) {
+
+      function changeSpeed(x, y) {
+        PlanetSpeed = "5000ms";
+        StarsSpeed = "9000ms";
+        if ((x, y)) {
           PlanetSpeed = x + "ms";
           StarsSpeed = y + "ms";
-        }        
+        }
       }
-     
+
       changeSpeed();
       addPlanet();
-      // Stars();
-
     })();
+
     $(document).ready(function() {
       $(".blast").on("mouseenter", function(e) {
         $(this).toggleClass("animated flash");
-    
       });
       $(".blast").on("mouseleave", function(e) {
         $(this).removeClass("animated flash");

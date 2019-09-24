@@ -8,6 +8,7 @@ let $ = JQuery;
 import "bootstrap";
 import "./all.js";
 import "./pace.js";
+// import "./particlesMyWork.js";
 Vue.config.productionTip = false;
 new Vue({
   router,
@@ -16,12 +17,7 @@ new Vue({
 
   mounted: function() {
     $(document).ready(function() {
-      $(".blast").on("mouseenter", function(e) {
-        $(this).toggleClass("animated rubberBand");
-      });
-      $(".blast").on("mouseleave", function(e) {
-        $(this).removeClass("animated rubberBand");
-      });
+    
     });
   }
 }).$mount("#app");

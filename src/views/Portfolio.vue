@@ -82,8 +82,3 @@ export default {
   },
 };
 </script>
-<style scoped lang="scss">
-.particles{
-display: none!important;
-}
-</style>

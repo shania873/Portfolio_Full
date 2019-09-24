@@ -136,32 +136,22 @@ kbd {
   right: 0;
 
   .dust {
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     -webkit-animation: dust .9s infinite ease-in;
     animation: dust .9s infinite ease-in;
-    background: rgba(211, 211, 211, 0.36);
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
-    box-shadow: 0 0 0.5rem 0 rgba(128, 128, 128, 0.5);
-    height: 14px;
+    height: 5px;
     position: fixed;
-    width: 6px;
+    width: 5px;
+    background-image: url(http://carolinevanaerschot.be/img/dust.svg);
+    background-size: contain;
+    opacity: 0;
     left: 1500px;
+    opacity: 1;
+    border: 0;
+    background-repeat: no-repeat;
   }
 
-  .USSEnterprise {
-    -webkit-animation: USSEnterprise .9s infinite ease-in;
-    animation: USSEnterprise .9s infinite ease-in;
-    background: rgba(241, 4, 4, 0.36);
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 0, 0, 0.5);
-    box-shadow: 0 0 0.5rem 0 rgba(255, 0, 0, 0.5);
-    height: 50px;
-    position: fixed;
-    width: 50px;
-    left: 50%;
-    background-image: url("/img/fusee.svg");
-  }
   .setstars {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);

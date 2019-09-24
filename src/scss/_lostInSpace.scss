@@ -67,9 +67,12 @@ DRIBBBLE: https://dribbble.com/shots/4330167-404-Page-Lost-In-Space
     text-align: center;
 }
 
-.objects img{
-    z-index: 90;
-    pointer-events: none;
+.objects {
+    img{
+        width: 15%;
+        z-index: 90;
+        pointer-events: none;
+    }
 }
 
 .object_rocket{
