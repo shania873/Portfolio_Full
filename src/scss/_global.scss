@@ -8,6 +8,10 @@
     text-rendering: optimizeLegibility;
     // border:solid 1px red;
 }
+#environment{
+    opacity: 1;
+ 
+}
 .page-enter-active, .page-leave-active {
     transition: opacity 1s, transform 1s;
   }
@@ -948,6 +952,10 @@ body {
 
 @media (max-width:530px) {   
     .container.home-page {
+        .bg-purple{
+            display:none;
+        }
+      
         #environment .dust {
         -webkit-animation: dust .9s infinite ease-in;
         animation: dust .9s infinite ease-in;
@@ -993,11 +1001,16 @@ body {
         width: 85%;
         left: 5%
     }
-
+    #planetset{
+        display:none!important;
+    }
     body {
         overflow-x: hidden
     }
-
+    #environment{
+        opacity: 0.2;
+     
+    }
     .home-page h1:after {
         display: none
     }

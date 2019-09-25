@@ -36,7 +36,10 @@ export default {
       isLoading: false
     };
   },
-  mounted: function() {},
+  mounted: function() {
+    document.body.style.overflow = "hidden";
+    document.getElementById("nav_bar").style.position = "absolute";
+  },
     methods: {
     submit() {
       let loader = Vue.$loading.show({
@@ -65,7 +68,7 @@ export default {
     this.isLoading = true;
  
     axios
-      .get("http://carolinevanaerschot.be/php/travauxGlobal.php")
+      .get("https://carolinevanaerschot.be/php/travauxGlobal.php")
       .then(res => {
         this.isLoading = false;
         this.post = res.data;

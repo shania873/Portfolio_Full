@@ -1,4 +1,5 @@
 <template>
+  <div id="page" class="fr">
 		<div class="container home-page" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
 					<div class="text-zone">
 						<h1 aria-label=" Hi, I’m ack,web developer." class="blast-root">
@@ -43,8 +44,10 @@
 							</div>
 						</div>
 					</div>
+				
+				
+				</div>
 					<div id="environment"></div>
-					<div class="bg" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
 				</div>
 </template>
 
@@ -58,6 +61,8 @@ export default {
 	},
 	mounted: function () {
 		(function () {
+			 document.body.style.overflow = "hidden";
+			 document.getElementById("nav_bar").style.position = "absolute";
 			let i;
 			let y = 10;
 			let ship = document.querySelector("#ship");

@@ -114,7 +114,8 @@ export default {
           StarsSpeed = y + "ms";
         }
       }
-
+       document.body.style.overflow = "hidden";
+       document.getElementById("nav_bar").style.position = "absolute";
       changeSpeed();
       addPlanet();
     })();
