@@ -1,19 +1,19 @@
 (function() {
   let i;
   let y = 10;
-  let ship = document.querySelector("#ship");
   let x = 10;
   let PlanetSpeed;
   let pos;
   let delay;
-  let posStars;
   let delayStars;
   let StarsSpeed;
   let addStars;
+  let particleItem;
   addPlanet(10);
   Stars(10);
   var interval = setInterval(Stars, 20000, 3);
-
+  let env = document.getElementById("environment");
+  console.log(env);
   function Stars(y) {
     clearInterval(interval);
     for (y = 0; y < 25; y++) {
@@ -29,14 +29,13 @@
       addStars.style.top = posStarsX;
       addStars.style.opacity = opacityStars;
 
-      document.getElementById("environment").appendChild(addStars);
+      env.appendChild(addStars);
       changeSpeed();
-    
     }
   }
   function addPlanet(x) {
     for (i = 0; i < 8; i++) {
-      let particleItem = document.createElement("div");
+      particleItem = document.createElement("div");
       particleItem.className = "dust";
       pos = Math.floor(Math.random() * window.innerWidth) + "px";
       delay = Math.random() * 2000;
@@ -44,7 +43,7 @@
       particleItem.style.animationDuration = PlanetSpeed;
       particleItem.style.left = pos;
       particleItem.style.top = pos;
-      document.getElementById("environment").appendChild(particleItem);
+      env.appendChild(particleItem);
       changeSpeed();
     }
   }
@@ -57,8 +56,8 @@
       StarsSpeed = y + "ms";
     }
   }
-
+  document.body.style.overflow = "hidden";
+  document.getElementById("nav_bar").style.position = "absolute";
   changeSpeed();
   addPlanet();
- 
 })();

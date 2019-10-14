@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="page" class="fr">
+    <div id="page">
       <div id="nav_bar">
         <a class="logo" rel="index" href="https://carolinevanaerschot.be">
           <img src="../src/assets/img/logoCaro.svg" alt="logo" />

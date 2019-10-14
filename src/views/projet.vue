@@ -8,7 +8,7 @@
         <h1 v-if="post2" v-html="post2.Nom_travaux" class="blast-root"></h1>
         <span v-if="post2" v-html="post2.Logiciels_Travaux"></span>
         <p v-if="post2" class="blast-root" v-html="post2.Description_Travaux"></p>
-        <!-- <span v-else>LOADING..</span> -->
+    
       </div>
 
       <div v-if="post2" class="setprojet">
@@ -70,7 +70,7 @@ document.getElementById("nav_bar").style.position = "fixed";
     this.isLoading = true;
 
     axios
-      .get("http://carolinevanaerschot.be/php/travauxGlobal.php")
+      .get("https://carolinevanaerschot.be/php/travauxGlobal.php")
       .then(res => {
         this.isLoading = false;
         this.post2 = res.data[this.$route.params.id];

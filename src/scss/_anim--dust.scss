@@ -1,0 +1,54 @@
+
+#environment {
+  // background: #222;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  z-index: -1;
+  right: 0;
+
+  .dust {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-animation: dust .9s infinite ease-in;
+    animation: dust .9s infinite ease-in;
+    height: 5px;
+    position: fixed;
+    width: 5px;
+    background-image: url(http://carolinevanaerschot.be/img/dust.svg);
+    background-size: contain;
+    opacity: 0;
+    left: 1500px;
+    opacity: 1;
+    border: 0;
+    background-repeat: no-repeat;
+  }
+
+  .setstars {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-animation: dust .9s infinite ease-in;
+    animation: dust .9s infinite ease-in;
+    height: 10px;
+    position: fixed;
+    width: 10px;
+    background-image: url(http://carolinevanaerschot.be/img/star.svg);
+    background-size: contain;
+    opacity: 0;
+    left: 1500px;
+    opacity: 1;
+    border: 0;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes dust {
+  from {
+    left: -50%;
+  }
+
+  to {
+    left: 150%;
+  }
+}
+

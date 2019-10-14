@@ -7,8 +7,7 @@
         <li v-for="(posts, key) in post"
           :style="{ backgroundImage: `url('${posts.img_travaux_1}')` }"
           v-bind:key="posts.id_travaux">
-          <!-- <strong class="hidden">{{key}}</strong> -->
-          <router-link :to="{ name: 'projet', params:{id : key}}">
+         <router-link :to="{ name: 'projet', params:{id : key}}">
             <div></div>
           </router-link>
         </li>

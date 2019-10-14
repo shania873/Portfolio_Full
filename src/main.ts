@@ -8,16 +8,15 @@ let $ = JQuery;
 import "bootstrap";
 import "./all.js";
 import "./pace.js";
-// import "./particlesMyWork.js";
+Vue.component('environementStars', { 
+  mounted: function() {
+    (function() {})();     
+  }
+ });
 Vue.config.productionTip = false;
 new Vue({
   router,
   store,
   render: h => h(App),
 
-  mounted: function() {
-    $(document).ready(function() {
-    
-    });
-  }
 }).$mount("#app");
