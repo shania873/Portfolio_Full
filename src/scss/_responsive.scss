@@ -343,16 +343,20 @@
 }
 
 @media (max-width:530px) {   
-    .about-text{
-        width: 90%;
+    .about{
+        .about-text{
+            width: 90%;
+        }
+        .about-planet {
+            display: none;
+        }
+        
     }
-    .about-planet {
-        display: none;
-    }
-    .homepage-title {
-        width: 87%;
-    }
+   
     .homepage {
+        .homepage-title {
+            width: 87%;
+        }
         .bg-space{
             display:none;
         }
@@ -369,10 +373,7 @@
         width: 6px;
         left: 50%;
     }
-    .particles {
-        opacity: 0.3;
-        display: none;
-    }
+  
     }
     h1 {
         font-size: 37px !important;
@@ -386,7 +387,7 @@
         margin: 10px 20px 10px 10px;
         display: block
     }
-
+header{
     #nav_bar ul {
         display: none
     }
@@ -408,29 +409,7 @@
     .home-page h1:after {
         display: none
     }
-
-    .chart-group {
-        width: 50%;
-        margin-bottom: 30px
-    }
-
-    .chart-group .chart:first-child {
-        margin: 0 auto 40px auto
-    }
-
-    .inf-map {
-        margin-left: 10%;
-        width: 80%;
-        position: static;
-        clear: both
-    }
-
-    .inf-map>span {
-        position: relative;
-        top: -10px
-    }
-
-     #nav_bar nav {
+    #nav_bar nav {
         width: 100%;
         position: absolute;
         left: 0;
@@ -446,7 +425,6 @@
         -webkit-transition: all .3s ease-out;
         transition: all .3s ease-out
     }
-
     .white #nav_bar nav {
         background: #fff
     }
@@ -468,12 +446,18 @@
         opacity: 1
     }
 
+}
+  
+   
+
+  
+
+  
+
     .contact-form ul li.half {
         width: 100%;
         margin-left: 0
     }
 
-    .preloader .inner {
-        top: 20px
-    }
+ 
 }

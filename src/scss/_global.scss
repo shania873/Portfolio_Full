@@ -89,6 +89,9 @@ input:focus {
     margin: 0 auto;
     position: relative
 }
+.open {
+    opacity: 1!important;
+}
 
 ::selection {
     background: #04a4cc;
@@ -161,17 +164,7 @@ a img.aligncenter {
 .router-link-exact-active.router-link-active {
   color: #08fdd8!important;
 }
-.open{
-    left: 0!important;
-    opacity: 1!important;
-}
-.st4{
-    background-color:white;
-}
-.Cinitial{
-    margin: auto;
-    font-family: 'Open Sans';
-}
+
 .browserupgrade {
     margin: .2em 0;
     background: #ccc;
@@ -183,7 +176,7 @@ h1 {
     font-size: 60px !important
 }
 
-.text-zone p {
+.about-text p,.homepage-text p {
     font-size: 14px !important;
     color: #fff
 }
