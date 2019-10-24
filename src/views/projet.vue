@@ -61,9 +61,8 @@ export default {
   },
 mounted: function() {
     	(function () {
-document.body.style.overflow = "visible";
-document.getElementById("nav_bar").style.position = "fixed";
-
+          document.body.style.overflow = "visible";
+          document.getElementById("nav_bar").style.position = "fixed";
 		})();
   },
   created: function() {
@@ -74,11 +73,13 @@ document.getElementById("nav_bar").style.position = "fixed";
       .then(res => {
         this.isLoading = false;
         this.post2 = res.data[this.$route.params.id];
+        console.log(this.post2);
  
       })
       .catch(err => {
         this.isLoading = false;
         this.error = err;
+        console.log(res);
    
       });
   },

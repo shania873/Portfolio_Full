@@ -35,7 +35,7 @@ export default {
             addStars.style.left = posStarsY;
             addStars.style.top = posStarsX;
             addStars.style.opacity = opacityStars;
-            console.log(env);
+            // console.log(env);
             env.appendChild(addStars);
             changeSpeed();
             }

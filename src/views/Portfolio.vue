@@ -76,6 +76,7 @@ export default {
       .catch(err => {
         this.isLoading = false;
         this.error = err;
+         this.post = res.data;
       
       });
   },
