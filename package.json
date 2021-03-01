@@ -21,7 +21,7 @@
     "particlesjs": "^2.2.3",
     "popper.js": "^1.15.0",
     "stats.js": "^0.17.0",
-    "three": "^0.108.0",
+    "three": "^0.125.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-gallery": "^2.0.0",
